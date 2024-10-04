@@ -1,0 +1,10 @@
+r=int(input("Enter your radius:"))
+l=int(input("enter the length:"))
+b=int(input("enter the breadth:"))
+h=int(input("enter the height"))
+circlearea=3.14*r*r
+rectanglearea=b*h
+trianglearea=0.5*l*b
+print("Area of circle=",circlearea)
+print("Area of rectangle=",rectanglearea)
+print("Area of triangle=",trianglearea)
