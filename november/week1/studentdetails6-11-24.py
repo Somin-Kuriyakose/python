@@ -1,23 +1,34 @@
-student={"Name":"Mrunal","Roll no":"34","Reg no":"MCA3456","Dept":"MCA","Semester":"1","Marks":{"MFC":19,"Data Structure":18,"DFCA":12,"Software Engineering":18,"Python":15}}
-total_marks=sum(student["Marks"].values())
-if total_marks>=90:
-    Grade="A"
-elif total_marks>=82:
-    Grade="B"
-elif total_marks>=75:
-    Grade="C"
-elif total_marks>=60:
-    Grade="D"
-elif total_marks>=50:
-    Grade="F"
-else:
-    student.pop("Roll no")
+student={}
+student["Name"]=input("Enter the name:")
+student["Roll Number"]=input("Enter the roll number:")
+student["Register Number"]=input("Enter the register number:")
+student["Department"]=input("Enter the department:")
+student["Semester"]=input("Enter the semester:")
+print("Student details: ",student)
+print()
 
-student["total_marks"]=total_marks
-student["grade"]=Grade
-print("Updated student dictionary:")
-for key,value in student.items():
-    if key=="marks":
-        print(f"{key}:{value}")
-    else:
-        print(f"{key}:{value}")
+student['total mark']=int(input("Enter the total mark out of 100:"))
+print()
+print("Student details after adding total mark:",student)
+print()
+
+if student['total mark']>=90:
+    student['grade']='A'
+    
+elif student['total mark']>=82:
+    student['grade']='B'
+    
+elif student['total mark']>=60:
+    student['grade']='C'
+    
+elif student['total mark']>=50:
+    student['grade']='p'
+else:
+    student['grade']='F'
+print("Student details after adding grade:",student)
+print()
+
+student.pop('Roll Number')
+print("Student details after deleting roll number:",student)
+
+
